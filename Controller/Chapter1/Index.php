@@ -14,7 +14,7 @@ class Index extends \Magento\Framework\App\Action\Action
     
     public function execute()
     {
-        var_dump(__METHOD__);
+        echo "Hello World";
         exit;
     }
 }
