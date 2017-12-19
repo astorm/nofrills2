@@ -14,9 +14,7 @@ class Index extends \Magento\Framework\App\Action\Action
     
     public function execute()
     {
-        $block = new \Pulsestorm\Nofrillslayout\Block\Chapter1\Hello;
-        echo $block->toHtml();
-        
+        echo "Hello World";
         exit;
     }
 }
