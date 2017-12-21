@@ -1,0 +1,9 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference 
+        for="\Magento\Framework\View\Layout"
+        type="\Pulsestorm\Nofrillslayout\Framework\View\Layout" />
+
+    <preference 
+        for="\Magento\Framework\View\LayoutInterface"
+        type="\Pulsestorm\Nofrillslayout\Framework\View\Layout" />            
+</config>
