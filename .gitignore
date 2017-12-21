@@ -1,3 +1,4 @@
 #user generate chapter 1 files
 Block/Chapter1/Hello2.php
 view/frontend/templates/chapter1/user/hello.phtml
+Block/Chapter1/User/Template.php
