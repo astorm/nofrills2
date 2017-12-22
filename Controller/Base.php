@@ -20,4 +20,15 @@ abstract class Base extends \Magento\Framework\App\Action\Action
     {
         return $this->ourObjectManager;
     }
+    
+    protected function loadXmlFromSampleXmlFolder($path)
+    {
+        $path = realpath(__DIR__) . '/../sample-xml/'  . $path;
+        $xml = simplexml_load_file($path);        
+        if(!$xml)
+        {
+            throw new \Exception("Could not load valid XML from $path");
+        }
+        return str_replace('<?xml version="1.0"?>', '', $xml->asXml());
+    }    
 }
