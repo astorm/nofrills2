@@ -1,0 +1,25 @@
+<referenceContainer name="top">
+    <block 
+        class="Pulsestorm\Nofrillslayout\Block\Chapter2\Template" 
+        name="root"
+        template="Pulsestorm_Nofrillslayout::chapter2/full-page/root.phtml">                  
+            <block class="Pulsestorm\Nofrillslayout\Block\Chapter2\Template" name="navigation" template="Pulsestorm_Nofrillslayout::chapter2/full-page/navigation.phtml">
+                <arguments>
+                    <argument name="links" xsi:type="array">
+                        <item name="home" xsi:type="string">Home</item>
+                        <item name="about" xsi:type="string">About</item>
+                        <item name="etc" xsi:type="string">Etc</item>
+                    </argument>
+                </arguments>            
+            </block>
+            
+            <block class="Pulsestorm\Nofrillslayout\Block\Chapter2\Template" name="content" template="Pulsestorm_Nofrillslayout::chapter2/full-page/content.phtml">
+                <arguments>
+                    <argument name="text" xsi:type="string">This is where the content goes.</argument>
+                </arguments>
+            </block>
+            
+            <block class="Pulsestorm\Nofrillslayout\Block\Chapter2\Template" name="footer" template="Pulsestorm_Nofrillslayout::chapter2/full-page/footer.phtml">
+            </block>
+    </block> 
+</referenceContainer>

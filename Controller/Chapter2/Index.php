@@ -14,7 +14,7 @@ class Index extends Base
         $container_xml = $this->loadXmlFromSampleXmlFolder('chapter2/user/top-container.xml');
         $updateManager->addUpdate($container_xml);        
         
-        $block_xml     = $this->loadXmlFromSampleXmlFolder('chapter2/user/blocks.xml');
+        $block_xml     = $this->loadXmlFromSampleXmlFolder('chapter2/page.xml');
         $updateManager->addUpdate($block_xml); 
         
         // $layout->generateElements();

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title><?php echo $this->getTitle();?></title>
+</head>
+<body>
+    <div id="navigation">
+        <?php echo $this->getChildHtml('navigation'); ?>
+        <!-- <a href="/home">Home</a> | <a href="/about">About</a> | <a href="/etc">Etc</a> -->
+    </div>
+    <hr/>
+    <div id="content">
+        <?php echo $this->getChildHtml('content'); ?>        
+    </div>
+    <hr/>
+    <div id="footer">
+        <?php echo $this->getChildHtml('footer'); ?>        
+    </div>    
+</body>
+</html>

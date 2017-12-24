@@ -24,7 +24,9 @@ abstract class Base extends \Magento\Framework\App\Action\Action
     protected function loadXmlFromSampleXmlFolder($path)
     {
         $path = realpath(__DIR__) . '/../sample-xml/'  . $path;
-        $xml = simplexml_load_file($path);        
+        //using the hated error surpression operator 
+        //to avoid xsi:type warnings from simple XML 
+        @$xml = simplexml_load_file($path);        
         if(!$xml)
         {
             throw new \Exception("Could not load valid XML from $path");
