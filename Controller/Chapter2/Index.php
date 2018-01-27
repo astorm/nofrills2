@@ -8,16 +8,25 @@ class Index extends Base
     {
         $objectManager = $this->getObjectManager();        
         $layout        = $objectManager->get('Magento\Framework\View\Layout');        
-        //$layout->addContainer('top', 'The top level container');  
-        $updateManager = $layout->getUpdate(); 
-
-        $container_xml = $this->loadXmlFromSampleXmlFolder('chapter2/user/top-container.xml');
-        $updateManager->addUpdate($container_xml);        
+        $layout->addContainer('top', 'The top level container');  
         
-        $block_xml     = $this->loadXmlFromSampleXmlFolder('chapter2/page.xml');
-        $updateManager->addUpdate($block_xml); 
+        $blockOne   = $layout->createBlock(
+            'Magento\Framework\View\Element\Template',
+            'pulsestorm_nofrills_chapter2_block1'
+        );
+        $blockOne->setTemplate('Pulsestorm_Nofrillslayout::chapter2/block1.phtml');
         
-        // $layout->generateElements();
-        echo $layout->getOutput();        
+        $blockTwo    = $layout->createBlock(
+            'Magento\Framework\View\Element\Template',
+            'pulsestorm_nofrills_chapter2_block2'
+        );
+        $blockTwo->setTemplate('Pulsestorm_Nofrillslayout::chapter2/block2.phtml');
+                      
+        $structure = $layout->getStructure(); //note: not standard magento
+        $structure->setAsChild('pulsestorm_nofrills_chapter2_block1', 'top');
+        $structure->setAsChild('pulsestorm_nofrills_chapter2_block2', 'top');
+        
+        $layout->generateElements();
+        echo $layout->getOutput();         
     }
 }
