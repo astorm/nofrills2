@@ -4,11 +4,7 @@ view/frontend/templates/chapter1/user/hello.phtml
 Block/Chapter1/User/Template.php
 view/frontend/templates/*/user/*
 sample-xml/*/user/*
-.DS_Store
-
 view/frontend/layout/our_custom_handle.xml
-
 view/frontend/layout/cms_index_index.xml
-
-
 view/frontend/layout/pulsestorm_nofrillslayout_chapter3_index.xml
+view/frontend/page_layout
