@@ -1,0 +1,8 @@
+<h2>Hello View Template</h2>
+<p>
+    Value of <code>helloWorld</code> variable [<span data-bind="text:helloWorld"></span>].
+</p>
+
+<ul data-bind="foreach:getLines()">
+    <li data-bind="text:$data"></li>
+</ul>
